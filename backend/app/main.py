@@ -22,7 +22,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Model weights path fix (Backend folder se models folder ka sahi rasta)
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-model_path = os.path.join(base_dir, "models", "aquaclass_mobilenetv2_best")
+model_path = os.path.join(base_dir, "models", "aquaclass_mobilenetv2_best.pth")
 
 model = load_trained_model(model_path, device=device)
 

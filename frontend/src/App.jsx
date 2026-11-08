@@ -56,11 +56,11 @@ const PROJECT_STATS = {
   trainImages: '17,478',
   valImages: '3,743',
   testImages: '3,750',
-  testAccuracy: '94.88%',
+  testAccuracy: '94.69%',
   valAccuracy: '94.87%',
-  weightedPrecision: '94.84%',
-  weightedRecall: '94.88%',
-  weightedF1: '94.83%',
+  weightedPrecision: '94.66%',
+  weightedRecall: '94.69%',
+  weightedF1: '94.66%',
   numClasses: 5,
   modelArch: 'MobileNetV2'
 };
@@ -71,8 +71,8 @@ const SPECIES_INFO = [
     name: 'Amphiprion clarkii',
     commonName: "Clark's Anemonefish",
     datasetCount: 4049,
-    precision: '98.51%',
-    recall: '98.19%',
+    precision: '98.86%',
+    recall: '97.86%',
     f1: '98.35%',
     color: '#3B82F6',
     description: 'A dark brown or black anemonefish with two or three white bands. Highly territorial and lives in symbiosis with sea anemones.',
@@ -86,9 +86,9 @@ const SPECIES_INFO = [
     name: 'Chaetodon lunulatus',
     commonName: 'Oval Butterflyfish',
     datasetCount: 2534,
-    precision: '99.47%',
-    recall: '99.21%',
-    f1: '99.34%',
+    precision: '98.43%',
+    recall: '98.95%',
+    f1: '98.69%',
     color: '#0D9488',
     description: 'Identifiable by its yellow oval body with thin dark horizontal lines and a prominent black eye stripe. Feeds almost exclusively on coral polyps.',
     habitat: 'Coral-rich Reefs & Protected Bays',
@@ -101,9 +101,9 @@ const SPECIES_INFO = [
     name: 'Chromis chrysura',
     commonName: 'Stout-body Chromis',
     datasetCount: 3593,
-    precision: '89.60%',
-    recall: '82.96%',
-    f1: '86.15%',
+    precision: '88.50%',
+    recall: '84.07%',
+    f1: '86.23%',
     color: '#6366F1',
     description: 'A damselfish species with a metallic blue-gray body, distinct dark vertical stripes, and a pale yellow tail fin. Forms large aggregations in current-swept reefs.',
     habitat: 'Outer Reef Slopes & Rocky Substrates',
@@ -116,9 +116,9 @@ const SPECIES_INFO = [
     name: 'Dascyllus reticulatus',
     commonName: 'Reticulate Dascyllus',
     datasetCount: 12112,
-    precision: '94.16%',
-    recall: '96.59%',
-    f1: '95.36%',
+    precision: '94.29%',
+    recall: '96.26%',
+    f1: '95.26%',
     color: '#F59E0B',
     description: 'The most dominant class in Fish4Knowledge dataset. Displays a white body with two prominent dark vertical bars and black-edged scales creating a mesh pattern.',
     habitat: 'Branching Acropora Coral Colonies',
@@ -131,9 +131,9 @@ const SPECIES_INFO = [
     name: 'Plectroglyphidodon dickii',
     commonName: "Dick's Damselfish",
     datasetCount: 2683,
-    precision: '94.99%',
-    recall: '94.04%',
-    f1: '94.51%',
+    precision: '94.70%',
+    recall: '93.05%',
+    f1: '93.87%',
     color: '#EC4899',
     description: 'Recognizable by its brownish-yellow front body, a bold black vertical band near the rear, and a striking white tail peduncle. Highly territorial over coral branches.',
     habitat: 'Exposed Surge Zones & Coral Reef Tops',
@@ -155,11 +155,11 @@ const DATASET_DISTRIBUTION = SPECIES_INFO.map(s => ({
 }));
 
 const CONFUSION_MATRIX = [
-  [597, 0, 0, 9, 2],
-  [1, 378, 0, 2, 0],
-  [1, 0, 448, 79, 12],
-  [6, 2, 48, 1756, 6],
-  [1, 0, 4, 19, 379]
+  [595, 2, 0, 9, 2],
+  [1, 377, 0, 1, 2],
+  [0, 0, 454, 77, 9],
+  [3, 3, 54, 1750, 8],
+  [3, 1, 5, 19, 375]
 ];
 
 const PRESET_SAMPLES = [
@@ -1162,8 +1162,11 @@ export default function App() {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-100 dark:divide-slate-800/60 font-medium">
-                    {SPECIES_INFO.map((species) => {
-                      const testSupport = Math.floor(species.datasetCount * 0.15);
+                    {SPECIES_INFO.map((species, index) => {
+                      const testSupport = CONFUSION_MATRIX[index].reduce(
+                        (sum, value) => sum + value,
+                         0
+                     );
                       return (
                         <tr key={species.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/40">
                           <td className="py-3.5 px-2">
@@ -1265,14 +1268,14 @@ export default function App() {
                   desc: 'Public repository containing React frontend and FastAPI PyTorch backend modules.',
                   icon:  Code2,
                   action: 'View Repository',
-                  url: 'https://github me'
+                  url: 'https://github.com/chnajamulhassan/aquaclass-ai.git'
                 },
                 {
                   title: 'Project Report (PDF)',
                   desc: 'Comprehensive BSCS documentation detailing dataset split, model loss, and confusion matrix analysis.',
                   icon: FileText,
                   action: 'Read Documentation',
-                  url: '#'
+                  url: 'https://drive.google.com/file/d/1bi90s-6FMmEh4lQkg-1z8FY2t93uPa4F/view?usp=sharing'
                 },
                 {
                   title: 'YouTube Demonstration',
@@ -1293,7 +1296,7 @@ export default function App() {
                   desc: 'Final semester project slides with key deep learning metrics and architecture evaluation.',
                   icon: Layers,
                   action: 'View Presentation',
-                  url: '#' // Yahan apni PPT presentation ka link daal dein
+                  url: 'https://docs.google.com/presentation/d/129XVr4AoOntR7bxrRMoUCYVs3NzzFQ4x/edit?usp=sharing&ouid=107662592479196420671&rtpof=true&sd=true' // Yahan apni PPT presentation ka link daal dein
                 },
                 {
                   title: 'FastAPI Backend Endpoint',
@@ -1403,7 +1406,7 @@ export default function App() {
                 type="text"
                 value={apiEndpoint}
                 onChange={(e) => setApiEndpoint(e.target.value)}
-                placeholder="http://localhost:8000"
+                placeholder="http://127.0.0.1:8000"
                 className="w-full px-3.5 py-2.5 rounded-xl border text-xs font-mono focus:outline-none focus:ring-2 focus:ring-teal-500 bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700"
               />
             </div>
