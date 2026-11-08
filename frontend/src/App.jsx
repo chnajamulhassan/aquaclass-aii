@@ -193,7 +193,9 @@ const PRESET_SAMPLES = [
 export default function App() {
   const [activeTab, setActiveTab] = useState('home');
   const [darkMode, setDarkMode] = useState(false);
-  const [apiEndpoint, setApiEndpoint] = useState('http://localhost:8000');
+  const [apiEndpoint, setApiEndpoint] = useState(
+  import.meta.env.VITE_API_URL || 'http://localhost:8000'
+  );
   const [backendStatus, setBackendStatus] = useState('standalone'); // 'connected' | 'standalone' | 'testing'
   const [showConfigModal, setShowConfigModal] = useState(false);
 
