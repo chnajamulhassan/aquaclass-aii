@@ -71,7 +71,7 @@ const SPECIES_INFO = [
     name: 'Amphiprion clarkii',
     commonName: "Clark's Anemonefish",
     datasetCount: 4049,
-    precision: '98.86%',
+    precision: '98.84%',
     recall: '97.86%',
     f1: '98.35%',
     color: '#3B82F6',
@@ -464,7 +464,7 @@ export default function App() {
                   </h1>
 
                   <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl">
-                    AquaClass AI leverages a custom Transfer Learning pipeline with MobileNetV2 trained on 24,971 expert-verified marine images to identify fish species with <strong className="text-teal-300">94.88% accuracy</strong>.
+                    AquaClass AI leverages a custom Transfer Learning pipeline with MobileNetV2 trained on 24,971 expert-verified marine images to identify fish species with <strong className="text-teal-300">94.69% accuracy</strong>.
                   </p>
 
                   <div className="flex flex-wrap gap-4 pt-2">
@@ -515,7 +515,7 @@ export default function App() {
                       </div>
                       <div className="p-2.5 rounded-xl bg-slate-800/60 border border-slate-700/50">
                         <span className="text-slate-400 block text-[10px]">Accuracy</span>
-                        <span className="font-bold text-emerald-400">94.88%</span>
+                        <span className="font-bold text-emerald-400">94.69%</span>
                       </div>
                       <div className="p-2.5 rounded-xl bg-slate-800/60 border border-slate-700/50">
                         <span className="text-slate-400 block text-[10px]">Latency</span>
@@ -1082,8 +1082,8 @@ export default function App() {
                     { key: 'Batch Size', val: '32 images per batch' },
                     { key: 'Epochs Trained', val: '10 Epochs' },
                     { key: 'Data Augmentations', val: 'RandomHorizontalFlip, RandomRotation(15)' },
-                    { key: 'Best Val Accuracy', val: '94.87% (Epoch 7)' },
-                    { key: 'Final Test Accuracy', val: '94.88%' }
+                    { key: 'Best Val Accuracy', val: '95.03% (Epoch 7)' },
+                    { key: 'Final Test Accuracy', val: '94.69%' }
                   ].map((row, i) => (
                     <div key={i} className="flex justify-between py-2 border-b border-slate-100 dark:border-slate-800/80">
                       <span className="text-slate-500 font-medium">{row.key}</span>
@@ -1270,14 +1270,14 @@ export default function App() {
                   desc: 'Public repository containing React frontend and FastAPI PyTorch backend modules.',
                   icon:  Code2,
                   action: 'View Repository',
-                  url: 'https://github.com/chnajamulhassan/aquaclass-ai.git'
+                  url: 'https://github.com/chnajamulhassan/aquaclass-aii'
                 },
                 {
                   title: 'Project Report (PDF)',
                   desc: 'Comprehensive BSCS documentation detailing dataset split, model loss, and confusion matrix analysis.',
                   icon: FileText,
                   action: 'Read Documentation',
-                  url: 'https://drive.google.com/file/d/1bi90s-6FMmEh4lQkg-1z8FY2t93uPa4F/view?usp=sharing'
+                  url: 'https://drive.google.com/file/d/1A9WQU0W6w-PBMrqnMIj9Zeil8SoVAX4x/view?usp=sharing'
                 },
                 {
                   title: 'YouTube Demonstration',
@@ -1298,7 +1298,7 @@ export default function App() {
                   desc: 'Final semester project slides with key deep learning metrics and architecture evaluation.',
                   icon: Layers,
                   action: 'View Presentation',
-                  url: 'https://docs.google.com/presentation/d/129XVr4AoOntR7bxrRMoUCYVs3NzzFQ4x/edit?usp=sharing&ouid=107662592479196420671&rtpof=true&sd=true' // Yahan apni PPT presentation ka link daal dein
+                  url: 'https://docs.google.com/presentation/d/1kPWjWiFhslrYwkWuA_rxealszJzKtdzy/edit?usp=sharing&ouid=107662592479196420671&rtpof=true&sd=true' // Yahan apni PPT presentation ka link daal dein
                 },
                 {
                   title: 'FastAPI Backend Endpoint',
@@ -1357,7 +1357,7 @@ export default function App() {
                 Automated fish species classification plays a crucial role in marine biology, aquaculture monitoring, and biodiversity preservation. Manual identification by marine taxonomists is labor-intensive and difficult to scale across continuous underwater video feeds.
               </p>
               <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                <strong>AquaClass AI</strong> solves this problem by training a lightweight MobileNetV2 deep convolutional neural network on 24,971 images spanning 5 coral reef species. By fine-tuning the classification layer using Transfer Learning with Adam optimizer, the system achieves a <strong>94.88% test accuracy</strong> while maintaining low inference latency suited for real-time web deployment.
+                <strong>AquaClass AI</strong> solves this problem by training a lightweight MobileNetV2 deep convolutional neural network on 24,971 images spanning 5 coral reef species. By fine-tuning the classification layer using Transfer Learning with Adam optimizer, the system achieves a <strong>94.69% test accuracy</strong> while maintaining low inference latency suited for real-time web deployment.
               </p>
             </div>
 
