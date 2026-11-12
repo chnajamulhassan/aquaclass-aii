@@ -73,8 +73,11 @@ AquaClass-AI/
 
 ## 📄 Project Documentation
 
-- Project Report: Available in the `docs` folder.
-- Presentation: Available in the `docs` folder.
+- 📘 [Download Project Report (PDF)](docs/AquaClass_AI_Project_Report.pdf)
+- 📊 [View Project Presentation (PPTX)](docs/Presentation.pptx)
+
+- 🎥 Project Demo: [YouTube Video](YOUR_YOUTUBE_LINK)
+
 
 ## 👨‍💻 Developer
 
