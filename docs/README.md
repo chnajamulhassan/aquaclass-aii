@@ -75,7 +75,7 @@ AquaClass-AI/
 
 - 📘 [📘 View Project Report](AquaClass_AI_Project_Report.pdf)
 - 📊 [View Presentation](AquaClass_AI_Presentation.pptx)
-🧠 [View Training Notebook](notebooks/AquaClass_AI_Training.ipynb.ipynb)
+🧠 [View Training Notebook](notebooks/AquaClass_AI_Training.ipynb)
 - 🎥 Project Demo: [YouTube Video](YOUR_YOUTUBE_LINK)
 
 
