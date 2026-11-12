@@ -66,6 +66,7 @@ AquaClass-AI/
 │   ├── AquaClass_AI_Training.ipynb.ipynb
 │   └── README.md
 ├── .gitignore
+└── README.md
 
 ## 🌐 Live Demo
 
