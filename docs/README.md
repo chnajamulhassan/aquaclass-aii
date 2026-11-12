@@ -55,23 +55,20 @@ Dataset Source: [Fish4Knowledge](https://homepages.inf.ed.ac.uk/rbf/Fish4Knowled
 
 ## 📂 Project Structure
 
+```text
 AquaClass-AI/
-│
 ├── backend/
-│
 ├── frontend/
-│
 ├── docs/
 │   ├── AquaClass_AI_Presentation.pptx
 │   ├── AquaClass_AI_Project_Report.pdf
 │   └── README.md
-│
 ├── notebooks/
 │   ├── AquaClass_AI_Training.ipynb
 │   └── README.md
-│
 ├── .gitignore
 └── README.md
+```
 
 
 ## 🌐 Live Demo
