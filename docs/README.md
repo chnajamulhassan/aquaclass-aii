@@ -73,8 +73,8 @@ AquaClass-AI/
 
 ## 📄 Project Documentation
 
-- 📘[Download Project Report](docs/AquaClass_AI_Project_Report.pdf)
-- 📊 [View Presentation](docs/Presentation.pptx)
+- 📘 [Download Project Report (PDF)](docs/REPORT_FILE_NAME.pdf)
+- 📊 [View Project Presentation (PPTX)](docs/AquaClass_AI_Presentation.pptx)
 
 - 🎥 Project Demo: [YouTube Video](YOUR_YOUTUBE_LINK)
 
